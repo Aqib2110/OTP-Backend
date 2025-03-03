@@ -14,6 +14,10 @@ app.options('*', cors());
 var genotp;
 const port = 3000;
 
+app.options('*', (req, res) => {
+    res.sendStatus(200); // Always respond with HTTP 200 during preflight
+});
+
 app.get('/',(req,res)=>{
   console.log(genotp);
   res.send({
