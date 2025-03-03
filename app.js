@@ -10,7 +10,6 @@ origin:["https://otp-frontend-rust.vercel.app"],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true 
 }));
-app.options('*', cors());
 var genotp;
 const port = 3000;
 
