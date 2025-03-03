@@ -20,7 +20,7 @@ app.options('*', (req, res) => {
 
 app.get('/',(req,res)=>{
   console.log(genotp);
-  res.send({
+  res.json({
     data:genotp
   })
 })
@@ -33,7 +33,7 @@ app.post('/email',async(req,res)=>{
   genotp = otp;
    console.log(otp);
   mailsender(email,otp);
-res.send({
+res.json({
   message:"email sent successfuly"
 });
 })
