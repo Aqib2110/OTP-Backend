@@ -9,6 +9,7 @@ origin:["https://otp-frontend-rust.vercel.app/"],
 methods:["GET","POST"],
 credentials:true
 }));
+app.options('*', cors());
 var genotp;
 const port = 3000;
 
