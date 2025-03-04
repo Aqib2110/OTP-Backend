@@ -31,7 +31,7 @@ app.post('/email',async(req,res)=>{
      let otp = parseInt(Math.random() * (999999 - 100000 + 1)) + 100000;
   genotp = otp;
    console.log(otp);
-  mailsender(email,otp);
+ await mailsender(email,otp);
 res.json({
   message:"email sent successfuly"
 });
