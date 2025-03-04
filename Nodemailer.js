@@ -12,6 +12,10 @@ function mailsender(email,otp){
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     },
+         pool: true,
+    maxConnections: 1,
+    maxMessages: 1,
+    rateLimit: 1,
     });
     ////////////////////////////////////////////////////////////////////////////////// process.env.EMAIL_PASS,
     let mailOptions = {
